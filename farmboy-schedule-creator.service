@@ -1,0 +1,16 @@
+[Unit]
+Description=Farm Boy Schedule Creator
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/farmboy-schedule-creator
+
+User=youruser
+Group=youruser
+
+Environment="FB_PASSWORD=example"
+Environment="FB_USERNAME=example@example.com"
+Environment="FB_API_KEY=ey..."
+Environment="FB_API_HOST=vjctyfglbwxurcdwcdcu.supabase.co"
+
+ExecStart=/usr/bin/env node index.js
